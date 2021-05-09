@@ -1,0 +1,72 @@
+﻿
+@model AddTask.Models.RegistrationBindingModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .alig {
+            padding-left: 500px;
+            flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+        }
+    .den {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        background: aqua;
+        padding: 5px;
+        border-radius: 7px;
+    }
+    </style>
+    </head>
+
+<body class="card-body" background="http://stemlab.by/ITschool/static/it_banner.png">
+    <h4>Регистрация</h4>
+    <hr />
+    <div class="alig">
+        <div class="den">
+            <form asp-action="Register">
+                <div class="form-group">
+                    <label  asp-for="FName" class="control-label"></label>
+                    <input asp-for="FName" class="form-control" />
+                    <span asp-validation-for="FName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LName" class="control-label"></label>
+                    <input asp-for="LName" class="form-control" />
+                    <span asp-validation-for="LName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div>
+                    <select name="listItem" asp-items="@ViewBag.SList"> </select>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Записаться" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryvalidate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validationunobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>

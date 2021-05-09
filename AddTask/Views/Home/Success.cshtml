@@ -1,0 +1,44 @@
+﻿@model AddTask.Models.RegistrationBindingModel
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cover Template · Bootstrap v5.0</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+    </style>
+
+    <link href="cover.css" rel="stylesheet">
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <main class="px-3">
+
+            <h4>@ViewBag.FName, вы записаны на консультацию @ViewBag.Date.<br /> Курс @ViewBag.Course</h4>
+
+        </main>
+
+    </div>
+
+
+
+</body>
+</html>
+
